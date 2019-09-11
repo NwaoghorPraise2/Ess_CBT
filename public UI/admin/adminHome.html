@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Admin Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" href="/Css/index.css" > -->
+    <link rel="stylesheet" href="adminHome.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex-center flex-column">
+            <div class="head">
+                <ul>
+                    <a href="genscore.html">ScoreBoard</a>
+                    <a href="result.html">Results</a>
+                </ul>
+            </div>
+            <div class="questionArea">
+                <form action="/add_question" method="POST">
+                    <p>UPDATE TEST QUESTIONS</p>
+                    <input type="text" name="question" id="Equestion" placeholder="Enter Question" required />
+                    <br />
+                    <input type="text" name="choice1" id="Echioce1" placeholder="Enter chioce1" required />
+                    <br />
+                    <input type="text" name="choice2" id="Echioce2" placeholder="Enter chioce2" required />
+                    <br />
+                    <input type="text" name="choice3" id="Echioce3" placeholder="Enter chioce3" required />
+                    <br />
+                    <input type="text" name="choice4" id="Echioce4" placeholder="Enter chioce4" required />
+                    <br />
+                    <input type="text" name="answer" id="Eanswer" placeholder="Answer eg{1 or 2 or 3 or 4}" required />
+                    <br />
+                    <button id="submit" class="btn">AddQuestion</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="adminHome.js"></script>
+</body>
+
+</html>

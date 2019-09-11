@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>score_page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./Css/index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="score" class="flex-center flex-column">
+            <h1>Your Score is:</h1>
+            <h1 id="finalScore"></h1>
+            <form>
+                <input type="text" name="username" id="username" placeholder="username" />
+                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveScore(event)" disabled>
+            Save
+          </button>
+            </form>
+            <a class="btn" href="./text_page.html" disabled>Restart</a>
+            <a class="btn" href="index.html">Go Home</a>
+        </div>
+    </div>
+    <script src="./Scripts/score.js"></script>
+</body>
+
+</html>

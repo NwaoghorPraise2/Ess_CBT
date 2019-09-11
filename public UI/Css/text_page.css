@@ -1,0 +1,79 @@
+.option-con {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgba(81, 83, 85, 0.25);
+    background-color: aliceblue;
+}
+
+.option-con:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 120ms;
+}
+
+.options {
+    padding: 1.5rem 2.5rem;
+    background-color: rgb(7, 7, 124);
+    color: white;
+}
+
+.choosen {
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.correct {
+    background-color: rgb(7, 124, 37);
+}
+
+.incorrect {
+    background-color: rgb(138, 14, 14);
+}
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 4rem;
+    border: 0.3rem solid #56a5eb;
+    margin-top: 1.5rem;
+}
+
+#progress-bar-full {
+    height: 3.4rem;
+    background-color: #56a5eb;
+    width: 0%;
+}
+
+#loader {
+    border: 1.6rem solid rgb(248, 245, 245);
+    border-top: 1.6rem solid #396e9c;
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
