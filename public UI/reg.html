@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./Css/reg.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex-center flex-column">
+            <div class="area">
+                <form action="/user_exam" method="POST">
+                    <h1>Fill the form to proceed</h1>
+                    <label>*FirstName</label>
+                    <input type="text" name="FirstName" id="name" required />
+                    <br />
+                    <label>*LastName</label>
+                    <input type="text" name="LastName" id="name1" required />
+                    <br />
+                    <label>*EmailAdd</label>
+                    <input type="email" name="Email" id="email" required />
+                    <br />
+                    <label>*PhoneNo.</label>
+                    <input type="number" name="Phone" id="num" required />
+                    <br />
+                    <button id="submit" class="btn"  >
+              Register
+            </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./Scripts/pop.js"></script>
+</body>
+
+</html>

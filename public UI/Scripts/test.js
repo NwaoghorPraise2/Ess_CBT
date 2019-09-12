@@ -95,5 +95,5 @@ increaseScore = num => {
     score += num;
     scoreText.innerText = score;
 };
-
+window.onbeforeunload = () => { return "Your work will be lost."; };
 // startTest();

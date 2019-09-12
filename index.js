@@ -61,6 +61,24 @@ app.get('/questions/:id', (request, response) => {
     });
 });
 
+app.post('/user_exam', (req, res) => {
+    const name = req.body.FirstName; 
+    const lname =req.body.LastName;
+    const email =req.body.Email;
+    const phone =req.body.Phone; 
+    pool.query(
+        "INSERT INTO user_exam (firstname, lastname , phonenumber , email) VALUES($1, $2, $3, $4)", [name, lname, phone, email],
+        error => {
+            if (error) {
+            console.log(error);
+        // alert('error occurred'+ error);
+            }
+           console.log(res) ;
+        //    res.status(201);
+        }
+    );
+    res.end();
+});
 
 
 
