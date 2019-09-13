@@ -79,8 +79,15 @@ app.post('/user_exam', (req, res) => {
     );
     // res.end();
 });
+app.get('/user_name', (request, response) => {
+    pool.query("SELECT lastname FROM user_exam ORDER BY lastname ASC LIMIT 1",(error, results) => {
+        if (error) {
+            throw error;
+        }
 
-
+        response.status(200).json(results);
+    });
+});
 
 app.listen(process.env.PORT || port, () => {
     console.log(`server started on ${port}`);

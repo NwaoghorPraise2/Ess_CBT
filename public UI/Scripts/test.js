@@ -5,6 +5,7 @@ const scoreText = document.getElementById("score");
 const progressbarfull = document.getElementById("progress-bar-full");
 const test = document.getElementById("test");
 const loader = document.getElementById("loader");
+const lastname = document.getElementById('lastname');
 // console.log(choosen);
 
 let currentQuestion = {};
@@ -24,6 +25,16 @@ fetch("http://localhost:4500/questions")
     .then(loadedQuestions => {
         console.log(loadedQuestions.rows);
         questions = loadedQuestions.rows;
+        
+        fetch("http://localhost:4500/user_name")
+            .then(res => {
+            console.log(res);
+            return res.json();
+            })
+            .then(lastName =>{
+            let ele = lastName.rows[0]; 
+            lastname.innerText = ele.lastname;
+            })
         startTest();
     })
     .catch(err => {
