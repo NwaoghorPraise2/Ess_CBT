@@ -70,14 +70,14 @@ app.post('/user_exam', (req, res) => {
         "INSERT INTO user_exam (firstname, lastname , phonenumber , email) VALUES($1, $2, $3, $4)", [name, lname, phone, email],
         error => {
             if (error) {
-            console.log(error);
+            throw(error);
         // alert('error occurred'+ error);
             }
-           console.log(res) ;
+            res.status(201).sendFile(__dirname + '/public UI/pop.html');
         //    res.status(201);
         }
     );
-    res.end();
+    // res.end();
 });
 
 
