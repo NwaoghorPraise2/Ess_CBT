@@ -1,5 +1,5 @@
 const min = document.getElementById("min");
-let time = 50;
+let time = 60;
 
 let emm = setInterval(()=>{
 min.innerText = time;
