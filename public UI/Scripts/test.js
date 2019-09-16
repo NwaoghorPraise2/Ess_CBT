@@ -130,16 +130,16 @@ if (min < 10) {
 min = '0' + min;
 
 }
-timer.innerHTML = min + ':' + remSec;
+timer.innerHTML = min + ':' + remSec + ' ' + 'LEFT';
 
 if (sec > 0){
 sec = sec - 1;
 } else {
 clearInterval(countDown);
 timer.innerHTML = 'TimeOut!!!!';
-window.location.assign('/')
+window.location.assign('/');
 }
-}
+};
 // 
 window.onbeforeunload = () => {
     return "Your work will be lost.";

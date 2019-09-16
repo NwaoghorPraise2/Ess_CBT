@@ -4,9 +4,9 @@ const email = document.getElementById("email");
 const num = document.getElementById("num");
 const submit = document.getElementById("submit");
 
-submit.addEventListener("click", goto(event));
+//submit.addEventListener("click", goto());
 
-goto = e => {
+goto = () => {
     if (name.value && name1.value && email.value && num.value) {
         e.preventDefault();
         window.location.assign(`./pop.html`);
