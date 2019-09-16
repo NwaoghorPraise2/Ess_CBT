@@ -5,7 +5,8 @@ const scoreText = document.getElementById("score");
 const progressbarfull = document.getElementById("progress-bar-full");
 const test = document.getElementById("test");
 const loader = document.getElementById("loader");
-const lastname = document.getElementById('lastname');
+const lastname = document.getElementById("lastname");
+const timer = document.getElementById("timers");
 // console.log(choosen);
 
 let currentQuestion = {};
@@ -25,16 +26,16 @@ fetch("http://localhost:4500/questions")
     .then(loadedQuestions => {
         console.log(loadedQuestions.rows);
         questions = loadedQuestions.rows;
-        
+
         fetch("http://localhost:4500/user_name")
             .then(res => {
-            console.log(res);
-            return res.json();
+                console.log(res);
+                return res.json();
             })
-            .then(lastName =>{
-            let ele = lastName.rows[0]; 
-            lastname.innerText = ele.lastname;
-            })
+            .then(lastName => {
+                let ele = lastName.rows[0];
+                lastname.innerText = ele.lastname;
+            });
         startTest();
     })
     .catch(err => {
@@ -106,5 +107,41 @@ increaseScore = num => {
     score += num;
     scoreText.innerText = score;
 };
-window.onbeforeunload = () => { return "Your work will be lost."; };
+
+
+console.log(timer);
+
+let sec = 1800;
+
+countDown = setInterval(() => {
+    secpass();
+
+},1000);
+
+secpass = () => {
+let min = Math.floor(sec / 60);
+let remSec = sec % 60;
+
+if (remSec < 10) {
+remSec = '0' + remSec;
+}
+
+if (min < 10) {
+min = '0' + min;
+
+}
+timer.innerHTML = min + ':' + remSec;
+
+if (sec > 0){
+sec = sec - 1;
+} else {
+clearInterval(countDown);
+timer.innerHTML = 'TimeOut!!!!';
+window.location.assign('/')
+}
+}
+// 
+window.onbeforeunload = () => {
+    return "Your work will be lost.";
+};
 // startTest();

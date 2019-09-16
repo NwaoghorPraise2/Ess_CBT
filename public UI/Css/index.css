@@ -123,11 +123,12 @@ input::placeholder {
     color: #aaa;
 }
 
-.logo{
-top:20rem;
-height: 9rem;
-
+.logo {
+    top: 20rem;
+    height: 9rem;
 }
+
+
 /* background: rgba(118,196,208,1);
 background: -moz-radial-gradient(center, ellipse cover, rgba(118,196,208,1) 0%, rgba(118,196,208,0.9) 21%, rgba(118,196,208,0.9) 27%, rgba(40,161,169,0.9) 57%);
 background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(118,196,208,1)), color-stop(21%, rgba(118,196,208,0.9)), color-stop(27%, rgba(118,196,208,0.9)), color-stop(57%, rgba(40,161,169,0.9)));
