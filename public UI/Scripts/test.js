@@ -18,6 +18,32 @@ let avaialbleQuestions = [];
 let questions = [];
 const MAX_QUESTIONS = 12;
 
+let sec = 1800;
+
+secpass = () => {
+let min = Math.floor(sec / 60);
+let remSec = sec % 60;
+
+if (remSec < 10) {
+remSec = '0' + remSec;
+}
+
+if (min < 10) {
+min = '0' + min;
+
+}
+timer.innerHTML = min + ':' + remSec + ' ' + 'LEFT';
+// console.log(timer.value);
+
+if (sec > 0){
+sec = sec - 1;
+} else {
+clearInterval(countDown);
+timer.innerHTML = 'TimeOut!!!!';
+window.location.assign('/score.html');
+}
+};
+
 fetch("http://localhost:4500/questions")
     .then(res => {
         console.log(res);
@@ -53,12 +79,34 @@ startTest = () => {
     getNewQuestion();
     test.classList.remove("hidden");
     loader.classList.add("hidden");
+    
+countDown = setInterval(() => {
+    secpass();
+
+},1000);
+
 };
 
 getNewQuestion = () => {
     if (avaialbleQuestions.lenght === 0 || questionCounter >= MAX_QUESTIONS) {
+        // sconsole.log(timer.value);
         localStorage.setItem("mostRecentScore", score);
-        return window.location.assign(`./score.html`);
+        const push = {
+        score:score
+        };
+        if(questionCounter>= MAX_QUESTIONS){
+        const pull = {
+        son:score
+        };
+        console.log(pull.son);
+        }
+        
+        // if()
+        
+        // console.log(push.score);
+        test.classList.remove("hidden");
+    loader.classList.add("hidden");
+        // return window.location.assign(`./score.html`);
     }
 
     questionCounter++;
@@ -105,43 +153,16 @@ choosen.forEach(choice => {
 
 increaseScore = num => {
     score += num;
+    // console.log(score);
     scoreText.innerText = score;
 };
 
+// module.exports={push};
+// console.log(timer);
 
-console.log(timer);
 
-let sec = 1800;
-
-countDown = setInterval(() => {
-    secpass();
-
-},1000);
-
-secpass = () => {
-let min = Math.floor(sec / 60);
-let remSec = sec % 60;
-
-if (remSec < 10) {
-remSec = '0' + remSec;
-}
-
-if (min < 10) {
-min = '0' + min;
-
-}
-timer.innerHTML = min + ':' + remSec + ' ' + 'LEFT';
-
-if (sec > 0){
-sec = sec - 1;
-} else {
-clearInterval(countDown);
-timer.innerHTML = 'TimeOut!!!!';
-window.location.assign('/');
-}
-};
 // 
-window.onbeforeunload = () => {
-    return "Your work will be lost.";
-};
+// window.onbeforeunload = () => {
+//     return "Your work will be lost.";
+// };
 // startTest();
