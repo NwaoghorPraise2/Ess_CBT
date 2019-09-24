@@ -21,27 +21,26 @@ const MAX_QUESTIONS = 12;
 let sec = 1800;
 
 secpass = () => {
-let min = Math.floor(sec / 60);
-let remSec = sec % 60;
+    let min = Math.floor(sec / 60);
+    let remSec = sec % 60;
 
-if (remSec < 10) {
-remSec = '0' + remSec;
-}
+    if (remSec < 10) {
+        remSec = "0" + remSec;
+    }
 
-if (min < 10) {
-min = '0' + min;
+    if (min < 10) {
+        min = "0" + min;
+    }
+    timer.innerHTML = min + ":" + remSec + " " + "LEFT";
+    // console.log(timer.value);
 
-}
-timer.innerHTML = min + ':' + remSec + ' ' + 'LEFT';
-// console.log(timer.value);
-
-if (sec > 0){
-sec = sec - 1;
-} else {
-clearInterval(countDown);
-timer.innerHTML = 'TimeOut!!!!';
-window.location.assign('/score.html');
-}
+    if (sec > 0) {
+        sec = sec - 1;
+    } else {
+        clearInterval(countDown);
+        timer.innerHTML = "TimeOut!!!!";
+        window.location.assign("/score.html");
+    }
 };
 
 fetch("http://localhost:4500/questions")
@@ -79,34 +78,43 @@ startTest = () => {
     getNewQuestion();
     test.classList.remove("hidden");
     loader.classList.add("hidden");
-    
-countDown = setInterval(() => {
-    secpass();
 
-},1000);
-
+    countDown = setInterval(() => {
+        secpass();
+    }, 1000);
 };
 
 getNewQuestion = () => {
-    if (avaialbleQuestions.lenght === 0 || questionCounter >= MAX_QUESTIONS) {
-        // sconsole.log(timer.value);
-        localStorage.setItem("mostRecentScore", score);
-        const push = {
-        score:score
-        };
-        if(questionCounter>= MAX_QUESTIONS){
-        const pull = {
-        son:score
-        };
-        console.log(pull.son);
-        }
-        
+    // if (avaialbleQuestions.lenght === 0 || questionCounter >= MAX_QUESTIONS) {
+    // sconsole.log(timer.value);
+
+    // const push = {
+    // score:score
+    // };
+    if (questionCounter >= MAX_QUESTIONS) {
+        // const pull = {
+        // son:score
+        //
+        // console.log(pull.son);
+        let final = score;
+        console.log(final);
+        let p1 = CORRECT_SCORE * MAX_QUESTIONS;
+        console.log(p1);
+        let p2 = final / p1;
+        console.log(p2);
+        let p3 = p2 * 100;
+        // console.log(Math.floor(p3));
+        let finalScore = Math.floor(p3);
+        // let convert =final / CORRECT_SCORE * MAX_QUESTIONS * 100;
+        // console.log(convert);
+        // }
+        localStorage.setItem("mostRecentScore", finalScore);
         // if()
-        
+
         // console.log(push.score);
         test.classList.remove("hidden");
-    loader.classList.add("hidden");
-        // return window.location.assign(`./score.html`);
+        loader.classList.add("hidden");
+        return window.location.assign(`./score.html`);
     }
 
     questionCounter++;
@@ -160,8 +168,7 @@ increaseScore = num => {
 // module.exports={push};
 // console.log(timer);
 
-
-// 
+//
 // window.onbeforeunload = () => {
 //     return "Your work will be lost.";
 // };

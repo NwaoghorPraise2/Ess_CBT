@@ -4,24 +4,34 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>score_page</title>
+    <title>Result Sheet</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./Css/index.css" />
+    <link rel="stylesheet" href="./Css/css.css" />
 </head>
 
 <body>
     <div class="container">
-        <div id="score" class="flex-center flex-column">
-            <h1>Your Score is:</h1>
-            <h1 id="finalScore"></h1>
-            <form>
-                <input type="text" name="username" id="username" placeholder="username" />
-                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveScore(event)" disabled>
-            Save
+        <div class="flex-center flex-column">
+            <div class="head">
+                <img src="./images/Emmakulate Logo.jpg" alt="Loading....." />
+            </div>
+            <div>
+                <p>You successfully completed the examination</p>
+                <p>
+                    You scored:<span><p id="score">%</p></span>
+                </p>
+            </div>
+            <div id="progressBar"></div>
+            <div>
+                <br />
+                <p>Name</p>
+                <br />
+                <p>your performed</p>
+                <br /><br /><br />
+                <button onclick="window.print()" class="btn">
+            Print Your Result
           </button>
-            </form>
-            <a class="btn" href="./text_page.html" disabled>Restart</a>
-            <a class="btn" href="index.html">Go Home</a>
+            </div>
         </div>
     </div>
     <script src="./Scripts/score.js"></script>
