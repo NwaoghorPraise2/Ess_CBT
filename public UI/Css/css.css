@@ -157,7 +157,7 @@ font-size: 4vh;
 
 #progressBar {
     width: 60vh;
-    height: 4vh;
+    height: 4.5vh;
     border: 0.2rem solid #56a5eb;
     margin-top: 1.5rem;
 }
@@ -179,4 +179,12 @@ font-size: 4vh;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
     transform: translateY(-0.1rem);
     transition: transform 120ms;
+}
+
+
+
+#Result-bar {
+    height: 3.4rem;
+    background-color: #56a5eb;
+    width: 0%;
 }

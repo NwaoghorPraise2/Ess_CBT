@@ -97,6 +97,34 @@ app.get("/user_name", (request, response) => {
     );
 });
 
+app.get("/exam_score", (request, response) => {
+    pool.query(
+        " SELECT lastname, firstname FROM user_exam ORDER BY id DESC LIMIT 1",
+        (error, results) => {
+            if (error) {
+                throw error;
+            }
+
+            response.status(200).json(results);
+        }
+    );
+});
+
+app.post("/save_score", (req, res) => {
+    let score = req.body.scoreVal;
+    console.log(score);
+       pool.query(
+        "INSERT INTO score (scores) VALUES($1)", [score],
+        error => {
+            if (error) {
+                  throw(error);
+            }
+            res.status(201);
+        }
+    );
+    res.end();
+});
+
 app.listen(process.env.PORT || port, () => {
     console.log(`server started on ${port}`);
 });

@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <form action="/save_score" method="POST">
     <div class="container">
         <div class="flex-center flex-column">
             <div class="head">
@@ -17,24 +18,29 @@
             </div>
             <div>
                 <p>You successfully completed the examination</p>
+                
                 <p>
-                    You scored:<span><p id="score">%</p></span>
+                    You scored:<span><p type="number" id="score"  name="scoreVal"></p></span>
                 </p>
             </div>
-            <div id="progressBar"></div>
+            <div id="progressBar">
+                <div id="Result-bar"></div>
+            </div>
             <div>
                 <br />
-                <p>Name</p>
+                <p id = "name"></p>
                 <br />
-                <p>your performed</p>
+                <p id="perform"></p>
                 <br /><br /><br />
-                <button onclick="window.print()" class="btn">
+                <button  class="btn">
             Print Your Result
           </button>
+      
             </div>
         </div>
     </div>
     <script src="./Scripts/score.js"></script>
+</form>
 </body>
 
 </html>
