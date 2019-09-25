@@ -4,8 +4,6 @@ const email = document.getElementById("email");
 const num = document.getElementById("num");
 const submit = document.getElementById("submit");
 
-//submit.addEventListener("click", goto());
-
 goto = () => {
     if (name.value && name1.value && email.value && num.value) {
         e.preventDefault();
@@ -15,6 +13,4 @@ goto = () => {
     }
 };
 
-window.onbeforeunload = () => {
-    return "Your work will be lost.";
-};
+//this page to be worked on..

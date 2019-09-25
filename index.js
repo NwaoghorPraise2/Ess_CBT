@@ -4,8 +4,6 @@ const cors = require("cors");
 const { pool } = require("./dbconfig");
 const path = require("path");
 const morgan = require("morgan");
-// const { pusher } = require("./public UI/Scripts/ej");
-// console.log(pusher);
 
 const app = express();
 const port = 4500;
