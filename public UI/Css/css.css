@@ -141,12 +141,6 @@ height:12vh;
 .head{
 padding:0;
 margin:0;
-/* justify-content: left; */
-/* background-color: aqua; */
-/* display: flex; */
-/* flex-direction: row; */
-/* justify-content: space-around; */
-
 
 }
 p{
@@ -156,8 +150,8 @@ font-size: 4vh;
 
 
 #progressBar {
-    width: 60vh;
-    height: 4.5vh;
+    width: 60rem;
+    height: 4.5rem;
     border: 0.2rem solid #56a5eb;
     margin-top: 1.5rem;
 }
@@ -184,7 +178,7 @@ font-size: 4vh;
 
 
 #Result-bar {
-    height: 3.4rem;
+    height: 4.2rem;
     background-color: #56a5eb;
     width: 0%;
 }
