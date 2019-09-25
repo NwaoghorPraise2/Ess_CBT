@@ -28,30 +28,36 @@
 #icon {
     /* background: rgb(113, 170, 243); */
     /* padding:9rem; */
-    padding: 4rem 4rem 1rem 4rem;
-    margin-top: 4rem;
+    padding: 4rem 0rem 1rem 4rem;
+    margin-top: 3rem;
     /* margin-bottom: 3rem; */
 }
 
 #timer {
-    /* background: rgba(141, 182, 243, 0.74); */
+    background: rgba(141, 182, 243, 0.74);
     padding: 4rem;
     margin-top: 4rem;
-    /* margin-bottom: 3rem; */
+    margin-bottom: 3rem;
 }
 
 #timer p {
-    margin: 0;
-    padding: 0;
-    font-size: 4rem;
+    /* padding: 4rem;  */
+    /* margin-top: 4rem; */
+    /* margin-bottom: 3rem; */
+/* background: #396e9c; */
+    /* margin: 0;
+    padding: 0; */
+    font-size: 3vh;
+    padding: 0 ;
+    
 }
 
 #icon P {
-    font-size: 3rem;
+    font-size: 3vh;
 }
 
 #icon i {
-    padding: 0 5rem 0 5rem;
+    padding: 0 3rem 0 2rem;
 }
 
 .correct {
