@@ -1,8 +1,6 @@
 :root {
     background-color: white;
-    /* background-image: url("../images/bg.jpeg"); */
     font-size: 62.5%;
-   
 }
 
 * {
@@ -11,7 +9,6 @@
     margin: 0;
     padding: 0;
     color: rgba(12, 70, 136, 0.938);
-
 }
 
 h1,
@@ -52,9 +49,6 @@ h3 {
     max-width: 80rem;
     margin: 200px auto;
     padding:2rem;
-    /* border: #aaa;
-    border-style: solid; */
-  
 }
 
 .container>* {
@@ -143,39 +137,17 @@ padding:0;
 margin:0;
 
 }
+
 p{
 font-size: 4vh;
-
 }
-
 
 #progressBar {
     width: 60rem;
     height: 4.5rem;
-    border: 0.2rem solid #56a5eb;
+    border: 0.2rem solid #022a4de1;
     margin-top: 1.5rem;
 }
-
-.btn {
-    font-size: 1.8rem;
-    padding: 1rem 2rem;
-    width: 22rem;
-    text-align: center;
-    border: 0.1rem solid #56a5eb;
-    margin-bottom: 1rem;
-    text-decoration: none;
-    color: #56a5eb;
-    background-color: white;
-}
-
-.btn:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
-    transform: translateY(-0.1rem);
-    transition: transform 120ms;
-}
-
-
 
 #Result-bar {
     height: 4.2rem;

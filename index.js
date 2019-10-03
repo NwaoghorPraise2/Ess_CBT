@@ -40,7 +40,7 @@ app.post("/add_question", (req, res) => {
         "INSERT INTO questions (question, choice1 , choice2 ,choice3 ,choice4 ,answer) VALUES($1, $2, $3, $4, $5, $6)", [question, choice1, choice2, choice3, choice4, answer],
         error => {
             if (error) {
-                alert("error occurred" + error);
+                throw(error);
             }
             res.status(201);
         }
@@ -52,6 +52,7 @@ app.get("/questions", getBooks);
 
 app.get("/questions/:id", (request, response) => {
     const id = request.params.id;
+    // const res = [];
     pool.query(
         "SELECT * FROM questions WHERE id = $1", [id],
         (error, results) => {
@@ -62,6 +63,9 @@ app.get("/questions/:id", (request, response) => {
             response.status(200).json(results);
         }
     );
+    // res.push(results);
+    
+    
 });
 
 app.post("/user_exam", (req, res) => {
@@ -111,16 +115,30 @@ app.get("/exam_score", (request, response) => {
 app.post("/save_score", (req, res) => {
     let score = req.body.scoreVal;
     console.log(score);
-       pool.query(
-        "INSERT INTO score (scores) VALUES($1)", [score],
-        error => {
+    //    pool.query(
+        // "INSERT INTO score (scores) VALUES($1)", [score],
+        // error => {
+            // if (error) {
+                //   throw(error);
+            // }
+            // res.status(201);
+        // }
+    // );
+    res.json();
+    res.end();
+});
+
+app.get("/user_infor", (request, response) => {
+    pool.query(
+        "SELECT * FROM user_exam",
+        (error, results) => {
             if (error) {
-                  throw(error);
+                throw error;
             }
-            res.status(201);
+
+            response.status(200).json(results);
         }
     );
-    res.end();
 });
 
 app.listen(process.env.PORT || port, () => {

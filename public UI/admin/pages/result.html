@@ -6,23 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Result Sheet</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./Css/css.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="./images/Emmakulate Logo.jpg" />
+    <link rel="stylesheet" href="../../Css/css.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/Emmakulate Logo.jpg" />
     <meta name="author" content="Nwaoghor Praise C.">
 </head>
 
-<body>
-    <form action="/save_score" method="POST">
+<body onload="gen()">
+    <!-- <form action="/save_score" method="POST"> -->
     <div class="container">
         <div class="flex-center flex-column">
             <div class="head">
-                <img src="./images/Emmakulate Logo.jpg" alt="Loading....." />
+                <img src="../../images/Emmakulate Logo.jpg" alt="Loading....." />
             </div>
             <div>
                 <p>You successfully completed the examination</p>
-                <!-- <input type="number"  name="scoreVal" id="AXA"> -->
+                
                 <p>
-                    You scored:<span><p   type="number" id="score"  name="scoreVal"></p></span>
+                    You scored:<span><p type="number" id="score"  name="scoreVal"></p></span>
                 </p>
             </div>
             <div id="progressBar">
@@ -30,7 +30,7 @@
             </div>
             <div>
                 <br />
-                <p id = "name"></p>
+                <p id="name"></p>
                 <br />
                 <p id="perform"></p>
                 <br /><br /><br />
@@ -41,8 +41,8 @@
             </div>
         </div>
     </div>
-    <script src="./Scripts/score.js"></script>
-</form>
+    <!-- <script src="..//scripts/Vuser.js"></script> -->
+<!-- </form> -->
 </body>
 
 </html>

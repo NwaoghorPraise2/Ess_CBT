@@ -17,7 +17,7 @@ login = () => {
     //e.preventDefault();
     if (username === Uname && password === Pword) {
         alert("welcome");
-        window.location.assign("adminHome.html");
+        window.location.assign("./pages/adminHome.html");
     } else {
         alert("Incorrect try again!!!");
     }
