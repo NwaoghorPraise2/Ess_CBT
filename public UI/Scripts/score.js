@@ -7,6 +7,19 @@ const mostRecentScore = localStorage.getItem("mostRecentScore");
 resultBar.style.width = `${mostRecentScore}%`;
 
 score.innerText = mostRecentScore + "%";
+let data = { element: mostRecentScore};
+fetch("/save_score", {
+method: "POST",
+headers: {
+'Content-Type': 'application/json'
+},
+
+body: JSON.stringify(data)
+})
+.then ( res => {
+    console.log("Request", res);
+}); 
+
 
 if(mostRecentScore >= 70) {
     perform.innerHTML = "Excellent Performance !!!";

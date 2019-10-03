@@ -113,8 +113,8 @@ app.get("/exam_score", (request, response) => {
 });
 
 app.post("/save_score", (req, res) => {
-    let score = req.body.scoreVal;
-    console.log(score);
+    // let score = req.body.scoreVal;
+    console.log(req.body);
     //    pool.query(
         // "INSERT INTO score (scores) VALUES($1)", [score],
         // error => {
@@ -124,8 +124,8 @@ app.post("/save_score", (req, res) => {
             // res.status(201);
         // }
     // );
-    res.json();
-    res.end();
+    // res.json();
+    // res.end();
 });
 
 app.get("/user_infor", (request, response) => {
