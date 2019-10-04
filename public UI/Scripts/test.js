@@ -56,7 +56,7 @@ fetch("http://localhost:4500/questions")
             .then(lastName => {
                 let ele = lastName.rows[0];
                 idd = ele.id;
-                lastname.innerText = ele.lastname;
+                lastname.innerText = ele.lastname; 
             });
         startTest();
     })
@@ -147,4 +147,7 @@ increaseScore = num => {
 history.pushState(null, null , location.href);
 window.onpopstate = () => {
 history.go(1);
+};
+window.onbeforeunload = () =>  {
+    return `My dear ${Paddu}, this page is not to be refreshed, Thanks`;
 };
