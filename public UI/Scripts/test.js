@@ -143,3 +143,8 @@ increaseScore = num => {
     score += num;
     scoreText.innerText = score;
 };
+
+history.pushState(null, null , location.href);
+window.onpopstate = () => {
+history.go(1);
+};

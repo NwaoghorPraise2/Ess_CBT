@@ -12,5 +12,8 @@ goto = () => {
         alert("Please fill every field");
     }
 };
-
+history.pushState(null, null , location.href);
+window.onpopstate = () => {
+history.go(1);
+};
 //this page to be worked on..
