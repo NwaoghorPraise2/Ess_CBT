@@ -88,7 +88,7 @@ app.post("/user_exam", (req, res) => {
 });
 app.get("/user_name", (request, response) => {
     pool.query(
-        "SELECT lastname FROM user_exam ORDER BY id DESC LIMIT 1",
+        "SELECT lastname, id FROM user_exam ORDER BY id DESC LIMIT 1",
         (error, results) => {
             if (error) {
                 throw error;
@@ -101,7 +101,7 @@ app.get("/user_name", (request, response) => {
 
 app.get("/exam_score", (request, response) => {
     pool.query(
-        " SELECT lastname, firstname FROM user_exam ORDER BY id DESC LIMIT 1",
+        " SELECT lastname, firstname , score FROM user_exam ORDER BY id DESC LIMIT 1",
         (error, results) => {
             if (error) {
                 throw error;
@@ -113,19 +113,19 @@ app.get("/exam_score", (request, response) => {
 });
 
 app.post("/save_score", (req, res) => {
-    // let score = req.body.scoreVal;
-    console.log(req.body);
-    //    pool.query(
-        // "INSERT INTO score (scores) VALUES($1)", [score],
-        // error => {
-            // if (error) {
-                //   throw(error);
-            // }
-            // res.status(201);
-        // }
-    // );
+    let id = req.body.id;
+    let score = req.body.element;
+    pool.query(
+         "UPDATE user_exam SET score = $1 WHERE id =$2", [score,id],
+         error => {
+         if (error) {
+                  throw(error);
+            }
+            res.status(201);
+        }
+    );
     // res.json();
-    // res.end();
+    res.end();
 });
 
 app.get("/user_infor", (request, response) => {

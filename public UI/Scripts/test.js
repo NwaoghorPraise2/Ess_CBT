@@ -8,7 +8,6 @@ const loader = document.getElementById("loader");
 const lastname = document.getElementById("lastname");
 const timer = document.getElementById("timers");
 
-
 let currentQuestion = {};
 let acceptingAnswer = false;
 let score = 0;
@@ -19,6 +18,7 @@ let questions = [];
 const MAX_QUESTIONS = 12;
 
 let sec = 1800;
+let idd;
 
 secpass = () => {
     let min = Math.floor(sec / 60);
@@ -32,7 +32,6 @@ secpass = () => {
         min = "0" + min;
     }
     timer.innerHTML = min + ":" + remSec + " " + "LEFT";
-
 
     if (sec > 0) {
         sec = sec - 1;
@@ -56,6 +55,7 @@ fetch("http://localhost:4500/questions")
             })
             .then(lastName => {
                 let ele = lastName.rows[0];
+                idd = ele.id;
                 lastname.innerText = ele.lastname;
             });
         startTest();
@@ -85,7 +85,18 @@ getNewQuestion = () => {
         let p2 = final / p1;
         let p3 = p2 * 100;
         let finalScore = Math.floor(p3);
-        localStorage.setItem("mostRecentScore", finalScore);
+        // localStorage.setItem("mostRecentScore", finalScore);
+        let data = { element: finalScore, id: idd };
+        fetch("/save_score", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify(data)
+        }).then(res => {
+            // console.log("Request", res);
+        });
         test.classList.remove("hidden");
         loader.classList.add("hidden");
         return window.location.assign(`./score.html`);
