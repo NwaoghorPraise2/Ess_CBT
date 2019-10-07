@@ -18,12 +18,7 @@ fetch("http://localhost:4500/questions")
     })
     .then(loadedQuestions => {
        questions = loadedQuestions.rows;
-       console.log(questions);
-       console.log(questions[5]);
        ress = questions[arraydd];
-       console.log(ress);
-        // console.log(res);
-        // arraydd ++ ;
 qid.innerHTML= ress.id;
 question.innerHTML= ress.question;
 A.innerHTML= ress.choice1;

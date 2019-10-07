@@ -9,6 +9,7 @@ let emm = setInterval(() => {
         clearInterval(emm);
     }
 }, 1000);
+
 history.pushState(null, null , location.href);
 window.onpopstate = () => {
 history.go(1);

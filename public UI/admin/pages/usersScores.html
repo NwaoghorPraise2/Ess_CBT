@@ -13,10 +13,17 @@
 <body>
     <div class="container">
         <div class="flex-center flex-column">
-        <div class="head">
-        
-        <p>Users Information and score</p>
-        </div>
+            <div class="head">
+                <ul>
+                    <!-- <img src="../../images/Emmakulate Logo.jpg"  height="60vh" alt="Loading....." /> -->
+                    <!-- <p>Emmakulate Systems Solutions Examinations Admin Control page</p> -->
+                    <a href="./adminHome.html">Home</a>
+                    <a href="../pages/viewQues.html">Questions</a>
+                    <a href="../pages/correctQues.html">Correct A Question</a>
+                    <a href="../pages/usersScores.html">Users Info</a>
+                    <!-- <a href="../pages/genScore.html">Generate Score Sheet For User</a> -->
+                </ul>
+            </div>
     <div>
         <label>UserID:</label><p id="UserID" class="bk"></p> <br>
         <label>Firstname:</label><p id="Fname" class="bk"></p> <br>
@@ -26,10 +33,11 @@
         <label>Score:</label><p id="Score" class="bk"></p><br>
         <button class="btn" onclick="ekb()"> << </button>
         <button class="btn" onclick="ekj()"> >> </button>
-        <button class="btn" onclick="genPage()">Generate ResultSheet</button>
+        <button class="btn" onclick="Next()">Generate Result</button>
         </div>
         </div>
         </div>
         <script src="../scripts/Vuser.js"></script>
+        <!-- <script src="../../Scripts/score.js"></script> -->
 </body>
 </html>

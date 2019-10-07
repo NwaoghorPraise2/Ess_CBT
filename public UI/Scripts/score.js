@@ -34,7 +34,15 @@ fetch("http://localhost:4500/exam_score")
             resultBar.style.backgroundColor = `#bd0505e1`;
         }
     });
-    history.pushState(null, null , location.href);
+    
+    
+    printf = () => {
+    window.print();
+    window.alert('Goodbye!!!!');
+    window.location.assign('./index.html');
+    } ;
+
+history.pushState(null, null , location.href);
 window.onpopstate = () => {
 history.go(1);
 };

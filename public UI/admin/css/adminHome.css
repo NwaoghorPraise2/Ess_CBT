@@ -23,17 +23,39 @@
 
 .head {
     background-color: rgb(196, 214, 253);
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* padding: 2rem; */
+    /* padding-left: 200px; */
+    margin:0;
+    /* padding-right: 200px; */
 }
 
 a {
-    text-decoration: none;
+        text-decoration: none;
+        padding: 30px 40px 36px 30px;
+        color: rgb(6, 14, 32);
+        margin: 0px 0px 0px 0px;
+        font-size: 25px;
+        font-weight: 10px;
+        font-style: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           display: block; 
+           float:left;
+           text-align: center; 
+    }
+    
+a:hover {
+    background-color:  rgba(27, 57, 121, 0.65);
+    }
+    /* text-decoration: none; */
     /* float:left; */
-    padding: 4rem;
+    /* padding: 4rem; */
     /* padding-bottom: 1.2rem; */
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
+/* } */
+a.active{
+    background-color:  rgba(27, 57, 121, 0.65);
 }
 
 input {

@@ -38,6 +38,9 @@ secpass = () => {
     } else {
         clearInterval(countDown);
         timer.innerHTML = "TimeOut!!!!";
+        test.classList.remove("hidden");
+    loader.classList.add("hidden");
+        
         window.location.assign("/score.html");
     }
 };
@@ -95,7 +98,6 @@ getNewQuestion = () => {
 
             body: JSON.stringify(data)
         }).then(res => {
-            // console.log("Request", res);
         });
         test.classList.remove("hidden");
         loader.classList.add("hidden");
@@ -147,7 +149,4 @@ increaseScore = num => {
 history.pushState(null, null , location.href);
 window.onpopstate = () => {
 history.go(1);
-};
-window.onbeforeunload = () =>  {
-    return `My dear ${Paddu}, this page is not to be refreshed, Thanks`;
 };

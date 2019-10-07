@@ -1,6 +1,8 @@
 :root {
     background-color: rgb(219, 245, 245);
     font-size: 62.5%;
+    background-image: url(../images/bg.jpeg);
+    /* background-blend-mode: luminosity; */
 }
 
 * {
@@ -130,7 +132,7 @@ input {
     border: 0.1rem solid #56a5eb;
     border-radius: 20px;
     padding: 5.4rem;
-    margin-top: 9rem;
+    margin-top: 16rem;
 }
 
 label {
