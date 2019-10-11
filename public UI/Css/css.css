@@ -5,7 +5,7 @@
 
 * {
     box-sizing: border-box;
-    font-family:Ink Free;
+    font-family: Ink Free;
     margin: 0;
     padding: 0;
     color: rgba(12, 70, 136, 0.938);
@@ -48,7 +48,7 @@ h3 {
     align-items: center;
     max-width: 80rem;
     margin: 200px auto;
-    padding:2rem;
+    padding: 2rem;
 }
 
 .container>* {
@@ -61,7 +61,7 @@ h3 {
 }
 
 .flex-center {
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -128,18 +128,16 @@ input::placeholder {
 }
 
 img {
-height:12vh;
-/* width:20vw; */
-
-}
-.head{
-padding:0;
-margin:0;
-
+    height: 20vh;
 }
 
-p{
-font-size: 4vh;
+.head {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-size: 4vh;
 }
 
 #progressBar {

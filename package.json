@@ -2,9 +2,8 @@
     "name": "quizapi",
     "version": "1.0.0",
     "description": "This is Emmakulate Quizing App",
-    "main": "index.js",
+    "main": "server.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "run":"nodemon index.js"
     },
     "author": "Nwaoghor Praise C.",

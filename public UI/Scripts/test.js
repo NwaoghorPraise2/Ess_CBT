@@ -15,9 +15,9 @@ let questionCounter = 0;
 let avaialbleQuestions = [];
 
 let questions = [];
-const MAX_QUESTIONS = 12;
+const MAX_QUESTIONS = 20;
 
-let sec = 1800;
+let sec = MAX_QUESTIONS * 25;
 let idd;
 
 secpass = () => {
@@ -39,8 +39,7 @@ secpass = () => {
         clearInterval(countDown);
         timer.innerHTML = "TimeOut!!!!";
         test.classList.remove("hidden");
-    loader.classList.add("hidden");
-        
+        loader.classList.add("hidden");
         window.location.assign("/score.html");
     }
 };
@@ -59,7 +58,7 @@ fetch("http://localhost:4500/questions")
             .then(lastName => {
                 let ele = lastName.rows[0];
                 idd = ele.id;
-                lastname.innerText = ele.lastname; 
+                lastname.innerText = ele.lastname;
             });
         startTest();
     })
@@ -88,7 +87,6 @@ getNewQuestion = () => {
         let p2 = final / p1;
         let p3 = p2 * 100;
         let finalScore = Math.floor(p3);
-        // localStorage.setItem("mostRecentScore", finalScore);
         let data = { element: finalScore, id: idd };
         fetch("/save_score", {
             method: "POST",
@@ -97,8 +95,7 @@ getNewQuestion = () => {
             },
 
             body: JSON.stringify(data)
-        }).then(res => {
-        });
+        }).then(res => {});
         test.classList.remove("hidden");
         loader.classList.add("hidden");
         return window.location.assign(`./score.html`);
@@ -146,7 +143,7 @@ increaseScore = num => {
     scoreText.innerText = score;
 };
 
-history.pushState(null, null , location.href);
+history.pushState(null, null, location.href);
 window.onpopstate = () => {
-history.go(1);
+    history.go(1);
 };

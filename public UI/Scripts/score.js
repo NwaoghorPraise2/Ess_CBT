@@ -6,12 +6,10 @@ let mostRecentScore;
 
 fetch("http://localhost:4500/exam_score")
     .then(res => {
-        console.log(res);
         return res.json();
     })
     .then(name => {
         let namm = name.rows[0];
-        console.log(namm);
         naddy.innerText = namm.firstname + " " + namm.lastname;
         mostRecentScore = namm.score;
         score.innerText = mostRecentScore + "%";
@@ -34,15 +32,14 @@ fetch("http://localhost:4500/exam_score")
             resultBar.style.backgroundColor = `#bd0505e1`;
         }
     });
-    
-    
-    printf = () => {
-    window.print();
-    window.alert('Goodbye!!!!');
-    window.location.assign('./index.html');
-    } ;
 
-history.pushState(null, null , location.href);
+printf = () => {
+    window.print();
+    window.alert("Goodbye!!!!");
+    window.location.assign("./index.html");
+};
+
+history.pushState(null, null, location.href);
 window.onpopstate = () => {
-history.go(1);
+    history.go(1);
 };

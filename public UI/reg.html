@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./Css/reg.css" />
     <link rel="shortcut icon" type="image/x-icon" href="./images/Emmakulate Logo.jpg" />
-    <meta name="author" content="Nwaoghor Praise C.">
+    <meta name="author" content="Nwaoghor Praise C." />
 </head>
 
-<body > 
+<body>
     <div class="container">
         <div class="flex-center flex-column">
             <div class="area">
-                <form action="/user_exam" method="POST">
+                <form>
                     <h1>Fill the form to proceed</h1>
                     <label>*FirstName</label>
                     <input type="text" name="FirstName" id="name" required />
@@ -27,10 +27,9 @@
                     <input type="email" name="Email" id="email" required />
                     <br />
                     <label>*PhoneNo.</label>
-                    <input type="number" name="Phone" id="num" max-value= 
-                    "14" required />
+                    <input type="number" name="Phone" id="num" max-value="14" required />
                     <br />
-                    <button id="submit" onclick="goto()" class="btn">
+                    <button id="submit" onclick="goto(event)" class="btn">
               Register
             </button>
                 </form>

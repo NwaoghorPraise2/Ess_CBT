@@ -1,5 +1,3 @@
-//window.alert('we dao wpork oh......');
-
 const btn = document.getElementById("btn");
 
 username.addEventListener("keyup", () => {
@@ -14,7 +12,6 @@ login = () => {
     const password = document.getElementById("password").value;
     const Uname = "admin";
     const Pword = "praise";
-    //e.preventDefault();
     if (username === Uname && password === Pword) {
         alert("welcome");
         window.location.assign("./pages/adminHome.html");
@@ -23,7 +20,7 @@ login = () => {
     }
 };
 
-history.pushState(null, null , location.href);
+history.pushState(null, null, location.href);
 window.onpopstate = () => {
-history.go(1);
+    history.go(1);
 };

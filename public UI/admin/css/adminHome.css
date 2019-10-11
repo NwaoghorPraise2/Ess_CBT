@@ -23,39 +23,29 @@
 
 .head {
     background-color: rgb(196, 214, 253);
-    /* display: flex; */
-    /* justify-content: center; */
-    /* padding: 2rem; */
-    /* padding-left: 200px; */
-    margin:0;
-    /* padding-right: 200px; */
+    margin: 0;
 }
 
 a {
-        text-decoration: none;
-        padding: 30px 40px 36px 30px;
-        color: rgb(6, 14, 32);
-        margin: 0px 0px 0px 0px;
-        font-size: 25px;
-        font-weight: 10px;
-        font-style: bold;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-           display: block; 
-           float:left;
-           text-align: center; 
-    }
-    
+    text-decoration: none;
+    padding: 30px 40px 36px 30px;
+    color: rgb(6, 14, 32);
+    margin: 0px 0px 0px 0px;
+    font-size: 25px;
+    font-weight: 10px;
+    font-style: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    float: left;
+    text-align: center;
+}
+
 a:hover {
-    background-color:  rgba(27, 57, 121, 0.65);
-    }
-    /* text-decoration: none; */
-    /* float:left; */
-    /* padding: 4rem; */
-    /* padding-bottom: 1.2rem; */
-    /* font-size: 1.6rem; */
-/* } */
-a.active{
-    background-color:  rgba(27, 57, 121, 0.65);
+    background-color: rgba(27, 57, 121, 0.65);
+}
+
+a.active {
+    background-color: rgba(27, 57, 121, 0.65);
 }
 
 input {
@@ -109,14 +99,16 @@ p {
     font-weight: bold;
     padding: 1.5rem;
 }
+
 .login {
     background-color: rgb(225, 239, 255);
     padding-top: 10rem;
     padding-bottom: 10rem;
 }
+
 .bk {
     display: flex;
-    margin-top:1.5rem;
+    margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     width: 100%;
     font-size: 1.8rem;
@@ -135,4 +127,22 @@ p {
     padding: 1.5rem 2.5rem;
     background-color: rgb(7, 7, 124);
     color: white;
+}
+
+.create {
+    font-size: 4rem;
+}
+
+.res {
+    padding: 0;
+    margin: 0;
+    color: green;
+}
+
+label {
+    color: rgba(12, 70, 136, 0.938);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
 }

@@ -1,6 +1,5 @@
 const min = document.getElementById("min");
 let time = 60;
-
 let emm = setInterval(() => {
     min.innerText = time;
     time -= 1;
@@ -9,8 +8,7 @@ let emm = setInterval(() => {
         clearInterval(emm);
     }
 }, 1000);
-
-history.pushState(null, null , location.href);
+history.pushState(null, null, location.href);
 window.onpopstate = () => {
-history.go(1);
+    history.go(1);
 };

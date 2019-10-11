@@ -126,13 +126,16 @@ input::placeholder {
     top: 20rem;
     height: 9rem;
 }
+
 .we {
-font-style: italic;
-font-size: 2.7rem;
-font-family:'Arial Narrow Bold', sans-serif;
-padding:0;
-margin:0;
+    font-style: italic;
+    font-size: 2.7rem;
+    font-family: "Arial Narrow Bold", sans-serif;
+    padding: 0;
+    margin: 0;
 }
+
+
 /* .pic {
 background-image: url(../images/Emmakulate\ Logo.jpg);
 background-repeat: no-repeat;

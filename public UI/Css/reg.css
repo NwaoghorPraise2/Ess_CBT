@@ -2,7 +2,6 @@
     background-color: rgb(219, 245, 245);
     font-size: 62.5%;
     background-image: url(../images/bg.jpeg);
-    /* background-blend-mode: luminosity; */
 }
 
 * {
@@ -43,14 +42,7 @@ h3 {
 }
 
 .container {
-    /* width: 100vh; */
-    /* height: 100vh; */
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* max-width: 80rem; */
-    /* margin: 0 auto; */
-    /* padding: 2rem; */
 }
 
 .container>* {
@@ -85,7 +77,6 @@ h3 {
     width: 22rem;
     text-align: center;
     border: 0.1rem solid #56a5eb;
-    /* margin-bottom: 4rem; */
     margin-left: 1rem;
     margin-top: 4rem;
     text-decoration: none;
@@ -112,12 +103,6 @@ form {
     flex-direction: column;
     align-items: center;
 }
-
-
-/* 
-#email {
-    margin-left: 4.1rem;
-} */
 
 input {
     margin-bottom: 1rem;

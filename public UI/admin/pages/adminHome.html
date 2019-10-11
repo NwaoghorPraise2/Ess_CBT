@@ -7,7 +7,7 @@
     <title>Admin Panel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="../../images/Emmakulate Logo.jpg" />
-    <meta name="author" content="Nwaoghor Praise C.">
+    <meta name="author" content="Nwaoghor Praise C." />
     <link rel="stylesheet" href="../css/adminHome.css" />
 </head>
 
@@ -27,26 +27,35 @@
                 </ul>
             </div>
             <div class="questionArea">
-                <form action="/add_question" method="POST">
+                <form>
                     <p>ADD A NEW QUESTIONS</p>
+                    <p class="res" id="res"></p>
+                    <label>Question:</label>
                     <input type="text" name="question" id="Equestion" placeholder="Enter Question" required />
                     <br />
+                    <label>Chioce 1:</label>
                     <input type="text" name="choice1" id="Echioce1" placeholder="Enter chioce1" required />
                     <br />
+                    <label>Chioce 2:</label>
                     <input type="text" name="choice2" id="Echioce2" placeholder="Enter chioce2" required />
                     <br />
+                    <label>Chioce 3:</label>
                     <input type="text" name="choice3" id="Echioce3" placeholder="Enter chioce3" required />
                     <br />
+                    <label>Chioce 4:</label>
                     <input type="text" name="choice4" id="Echioce4" placeholder="Enter chioce4" required />
                     <br />
-                    <input type="text" name="answer" id="Eanswer" placeholder="Answer eg{1 or 2 or 3 or 4}" required />
+                    <label>Answer should be either 1 or 2 or 3 or 4:</label>
+                    <input type="number" name="answer" id="Eanswer" placeholder="Answer eg{1 or 2 or 3 or 4}" max="1" required />
                     <br />
-                    <button id="submit" class="btn">AddQuestion</button>
+                    <button id="submit" class="btn" onclick="create(event)">
+              AddQuestion
+            </button>
                 </form>
             </div>
         </div>
     </div>
     <script src="../scripts/lock.js"></script>
-    </body>
+</body>
 
 </html>
