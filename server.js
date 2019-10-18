@@ -134,5 +134,5 @@ app.get("/user_infor", (request, response) => {
 });
 
 app.listen(process.env.PORT || port, () => {
-    console.log(`server started on ${port}`);
+    // console.log(`server started on ${port}`);
 });

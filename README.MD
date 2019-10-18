@@ -23,4 +23,20 @@ $ npm run run
 
 Ess_CBT will run on this address: <http://127.0.0.1:4500>
 
+## Admin Features:
+
+- Add a new question
+- Veiw users credentials and scores
+- Generated ResultSheet for Users
+- Correct Questions
+- More features coming up.....
+
+Admin Route:
+<http://127.0.0.1:4500/admin>
+
+## Admin Credentials:
+- Username = admin
+- Password = praise
+
+
 @Nwaoghor Praise C. for PraiseIntels Cooperation.
