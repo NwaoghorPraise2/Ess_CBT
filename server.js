@@ -17,17 +17,6 @@ app.use(cors());
 app.use(express.static("./public UI"));
 
 //routes
-const getBooks = (request, response) => {
-    const id = request.params.id;
-    pool.query("SELECT * FROM questions", (error, results) => {
-        if (error) {
-            throw error;
-        }
-
-        response.status(200).json(results);
-    });
-};
-
 app.post("/add_question", (req, res) => {
     const question = req.body.Question;
     const choice1 = req.body.Chioce1;
