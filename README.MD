@@ -1,27 +1,34 @@
-# _Quick Testing Web application_ By Nwaoghor Praise C.
+Quick Testing Web application By Nwaoghor Praise.
+Requirements
 
-## Requirements
+    Node.js platform +10
+    Install Postgresql 11.4+
+    Modern web browser (Chrome, Safari, Firefox or IE +10).
+    Basic Javascript Knowlegde(Both Client-side and sever-side)
+    Installing Packages with NPM.
 
-- [Node.js platform](https://nodejs.org/en/) `+10`
-- [ Install Postgresql](https://postgres.com)
-  `11.4+`
-- Modern web browser (Chrome, Safari, Firefox or IE +10).
-- Basic Javascript Knowlegde(Both Client-side and sever-side)
-- Installing Packages with NPM.
+Installation
 
-## Installation
+    Clone the repo. (git clone)
+    Perform the following:
 
-- Clone the repo. (git clone)
-- Perform the following:
+$ cd Ess_CBT
+$ npm install
+$ npm run run
 
-```bash
+Ess_CBT will run on this address: http://127.0.0.1:4500
+Admin Features:
 
-$ cd covid-19-monitor
-$ load live server
-```
+    Add a new question
+    Veiw users credentials and scores
+    Generated ResultSheet for Users
+    Correct Questions
+    More features coming up.....
 
-## Features:
+Admin Route: http://127.0.0.1:4500/admin
+Admin Credentials:
 
-- Add a new question
+    Username = admin
+    Password = praise
 
-@Nwaoghor Praise
+@Nwaoghor Praise for PraiseIntels Cooperation.
